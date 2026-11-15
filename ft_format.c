@@ -28,7 +28,7 @@ int	ft_format(char c, va_list args)
 	}
 	else if (c == 'x' || c == 'X')
 	{
-		return (ft_puthex(va_arg(args, int), c));
+		return (ft_puthex(va_arg(args, unsigned int), c));
 	}
 	else if (c == 'p')
 	{
@@ -37,6 +37,9 @@ int	ft_format(char c, va_list args)
 	else if (c == 'u')
 	{
 		return (ft_putunsigned(va_arg(args, unsigned int)));
+	}else if (c == '%')
+	{
+		return (ft_putchar(c));
 	}
 	return (0);
 }
