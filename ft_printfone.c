@@ -6,7 +6,7 @@
 /*   By: ayel-mac <ayel-mac@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 10:45:19 by username          #+#    #+#             */
-/*   Updated: 2026/11/15 23:50:28 by ayel-mac         ###   ########.fr       */
+/*   Updated: 2026/11/18 18:34:11 by ayel-mac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	ft_putstr(char *s)
 	int	i;
 
 	if (!s)
+	{
+		ft_putstr("(null)");
 		return (0);
+	}
 	i = 0;
 	while (s[i])
 	{
